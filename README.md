@@ -18,3 +18,93 @@ PAUL [CLICK AQUI ITQ](http://itq.edu.ec/)
 
 ![GOOGLE](https://androidayuda.com/app/uploads-androidayuda.com/2016/10/Google-Logo.jpg)
 
+## codigo
+
+
+```java 
+
+ public class EJERCICIO_01
+{
+    public static void main(String[] ARGS)
+    {
+        System.out.println("HOLA MUNDO JAVA...");
+    }
+}
+```
+
+# tablas
+
+|  edad  | nombre |
+|--------|--------|
+|   22   |  Paul  
+
+
+# Lineas 
+
+---
+***
+___
+
+# videos
+
+<a herf="https://www.youtube.com/watch?feature=player_embedded&v=tbneQDc2H3I" target ="_blank">
+<img
+src= http://img.youtube.com/vi/tbneQDc2H3I/0.jpg ></img>
+</a> 
+
+[![imagenvideo](http://img.youtube.com/vi/tbneQDc2H3I/0.jpg)]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
