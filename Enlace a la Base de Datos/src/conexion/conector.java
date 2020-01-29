@@ -13,15 +13,15 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Bryan
+ * @author Paul
  */
 public class conector {
     
     Connection conexion = null;
     
-    String url="jdbc:mysql://localhost:32801/prueba?useSSL=false"; //puerto generalmente 3306 y el nombre de la base
-    String usuario="admin"; 
-    String password="12345678";
+    String url="jdbc:mysql://localhost:3306/base?useSSL=false"; //puerto generalmente 3306 y el nombre de la base
+    String usuario="root"; 
+    String password="Listo123";
     
     
     public conector(){
