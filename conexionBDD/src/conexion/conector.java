@@ -18,43 +18,34 @@ import java.util.logging.Logger;
 public class conector {
     
     Connection conexion = null;
-    
-    String url="jdbc:mysql://localhost:3306/base?useSSL=false"; //puerto generalmente 3306 y el nombre de la base
-    String usuario="root"; 
-    String password="Listo123";
+    String url = 
+"jdbc:mysql://localhost:32773/prueba?useSSL=false";
+    String usuario = "admin";
+    String password = "12345678";
     
     
     public conector(){
-    
+        
         try {
-            conexion=(Connection) DriverManager.getConnection(url,usuario,password);
-            if(conexion!=null){
-            
-                System.out.println("Conexión Exitosa");
-            
-            }else{
-            
-                System.out.println("No hubo conexión");
-            
+            conexion = (Connection) DriverManager.getConnection(url,usuario,password);
+            if (conexion != null) {
+                System.out.println("Se conecto");
+            } else {
+                System.err.println("No Se conecto");
             }
         } catch (SQLException ex) {
-            
-            System.err.println("No se pudo conectar");
+            System.err.println("Error conexion");
             ex.printStackTrace();
         }
-    
     }
     
-    public Connection getConexion(){
     
+    public  Connection getConxion(){
         return conexion;
-    
     }
     
-    public void Desconectar(){
-    
+    public  void Desconectars(){
         conexion = null;
-    
     }
     
 }
