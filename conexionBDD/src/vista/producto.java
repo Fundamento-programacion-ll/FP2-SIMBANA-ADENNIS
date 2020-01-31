@@ -74,6 +74,7 @@ public class producto extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
         cbRegistros = new javax.swing.JComboBox<>();
         txt_update = new javax.swing.JButton();
+        txteliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,6 +179,13 @@ public class producto extends javax.swing.JFrame {
             }
         });
 
+        txteliminar.setText("Delete");
+        txteliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txteliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -190,7 +198,9 @@ public class producto extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addComponent(btnLimpiar)
                         .addGap(129, 129, 129)
-                        .addComponent(txt_update))
+                        .addComponent(txt_update)
+                        .addGap(94, 94, 94)
+                        .addComponent(txteliminar))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -208,10 +218,12 @@ public class producto extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addComponent(cbRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregar)
-                    .addComponent(btnLimpiar)
-                    .addComponent(txt_update))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_update)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAgregar)
+                        .addComponent(btnLimpiar))
+                    .addComponent(txteliminar))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -269,19 +281,19 @@ public class producto extends javax.swing.JFrame {
     }//GEN-LAST:event_cbRegistrosItemStateChanged
 
     private void txt_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_updateActionPerformed
-        if (rootPaneCheckingEnabled) {
-            String error = (String)JOptionPane.showInputDialog(null, "no dejes parametros en blanco");
-            
-                    
-        } else {
-            System.out.println("Campos de texto llenados correctamente");
-        }
+     
+        
+        
         
     }//GEN-LAST:event_txt_updateActionPerformed
 
     private void txtFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFieldNombreActionPerformed
+
+    private void txteliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txteliminarActionPerformed
+        
+    }//GEN-LAST:event_txteliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,5 +344,6 @@ public class producto extends javax.swing.JFrame {
     private javax.swing.JTextField txtFieldNombre;
     private javax.swing.JTextField txtFieldPrecio;
     private javax.swing.JButton txt_update;
+    private javax.swing.JButton txteliminar;
     // End of variables declaration//GEN-END:variables
 }

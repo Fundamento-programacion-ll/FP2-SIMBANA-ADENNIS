@@ -108,6 +108,17 @@ public class controladorArticulo {
             listaNombres.add(art);
         }
         return listaNombres;
+        
     }
-    
+    public void eliminarRegistro(){
+        try {
+            String delete = "delete from articulos where nombre = ?";
+            ps = conexion.getConxion().prepareStatement(delete);
+            ps.setString(1, "nintendo");
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(controladorArticulo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
 }
