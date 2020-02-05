@@ -5,6 +5,8 @@
  */
 package transaccion;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Paul
@@ -15,19 +17,40 @@ public class Transaccion {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
-        retiros r=new retiros(200, 2000);
-        System.out.println("cuenta N'"+r.ObtenCuenta());
-        
-        System.out.println(r.ejecutar());
-        depositos d=new depositos(255, r.ObtenCuenta());
-        
-        System.out.println(d.ejecutar());
-        ssaldo ss=new ssaldo(1000, r.ObtenCuenta());
-        System.out.println(ss.ejecutar());
-       
-       
+
+        int saldo;
+        String user="";
+        double cuenta= 0;
+        String fin;
+        fin = "";
+        saldo = 70;
+
+        do {
+            String opcion = JOptionPane.showInputDialog(null, " Elige la transaccion que quieres hacer: " + " \n " + " 1= usuario " + " \n " + " 2= Cuenta" + " \n " + "3= Revisar tu Saldo");
+            int no;
+            no = Integer.parseInt(opcion);
+            switch (no) {
+                case 1:
+                    String nuser = JOptionPane.showInputDialog(null, "Ingresa el Usuario");
+                 
+                    JOptionPane.showMessageDialog(null, "Tu usuario es:" + (user));
+                    break;
+                case 2:
+                    String Ncuenta = JOptionPane.showInputDialog(null, "Ingresa el numero de cuenta");
+                   
+                    JOptionPane.showMessageDialog(null, "tu numero de cuenta es:= " + (cuenta));
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "Tu saldo actual es= $" + saldo);
+                    break;
+            }
+            JOptionPane.showInputDialog("¿Deseas hacer otra operación?" + " \n " + " 1= si" + " \n " + " 2= no");
+
+        } while (fin == "");
+        JOptionPane.showMessageDialog(null, "Gr... por hacer uso del cajero");
+        System.exit(0);
     }
-    
+
 }
+
+
