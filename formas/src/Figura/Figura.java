@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package figura;
+package Figura;
 
+import java.awt.Canvas;
 import java.awt.Graphics;
-import javax.swing.JPanel;
 
 /**
  *
  * @author Paul
  */
-public abstract class figura extends JPanel {
+public abstract class Figura extends Canvas{
     
-public abstract void dibujo(Graphics g);
+    @Override
+    public abstract void paint(Graphics g);
     
+    public abstract void GetArea();
     
     
 }
